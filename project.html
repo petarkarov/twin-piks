@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Проект | Твин Пикс Ентериери</title>
+<meta name="description" content="Проект на Твин Пикс Ентериери: дизајн на ентериер и целосна реализација.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Твин Пикс Ентериери | Twin Piks Interiors">
+<meta property="og:title" content="Проекти | Твин Пикс Ентериери">
+<meta property="og:description" content="Кујни, домови и деловни простори што ги осмисливме и реализиравме.">
+<meta property="og:image" content="https://petarkarov.github.io/twin-piks/og-image.jpg">
+<meta property="og:locale" content="mk_MK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d0f0c">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=2">
+<script>document.documentElement.className="js"</script>
+</head>
+<body>
+<div class="nav">
+<a class="logo" href="index.html" aria-label="Твин Пикс"><svg viewBox="120 405 1325 585" aria-hidden="true"><polygon fill="#8fae6b" points="125,957 347,655 560,957 507,957 347,738 187,957"/><polygon fill="#9d9ea3" points="358,658 714,707 997,455 640,957 580,957"/><polygon fill="#8fae6b" points="648,957 1041,413 1436,957 1328,957 1041,565 755,957"/><rect fill="#8fae6b" x="125" y="973" width="1311" height="14"/></svg>Твин Пикс</a>
+<nav><a href="projects.html" data-k="n1">Проекти</a><a href="index.html#services" data-k="n2">Услуги</a><a href="index.html#process" data-k="n3">Процес</a><button class="lang" id="lang" type="button">EN</button><a class="pill" href="contact.html" data-k="n4">Контакт</a></nav>
+</div>
+
+<main>
+<section class="first"><div class="wrap">
+<a class="back" href="projects.html" data-k="back">← Сите проекти</a>
+<div class="eyebrow" id="pc"></div>
+<h1 class="ph1" id="pt"></h1>
+<p class="lead" id="pd"></p>
+<div class="album" id="album"></div>
+<div class="pnav" id="pnav"></div>
+<noscript><p><a href="projects.html">← Сите проекти</a></p></noscript>
+</div></section>
+
+<div class="cta">
+<h2 data-k="ch">Да го создадеме просторот што го замислувате.</h2>
+<div class="btns"><a class="btn" href="contact.html"><span data-k="cta">Започнете проект</span> →</a></div>
+</div>
+</main>
+<footer><div class="wrap"><span>© 2026 Твин Пикс Ентериери / Twin Piks Interiors</span><span data-k="ft">Дизајн · Реализација</span></div></footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-hidden="true">
+<img id="lbimg" alt="">
+<button type="button" class="x" id="lbx" data-ka="close">✕</button>
+<button type="button" class="pv" id="lbp" aria-label="‹">‹</button>
+<button type="button" class="nx" id="lbn" aria-label="›">›</button>
+<div class="ct" id="lbc"></div>
+</div>
+
+<script src="assets/projects.js?v=2"></script>
+<script src="assets/site.js?v=2"></script>
+<script>
+(function(){
+  var slug=new URLSearchParams(location.search).get("p"),idx=-1;
+  PROJECTS.forEach(function(p,i){if(p.slug===slug)idx=i});
+  if(idx<0){location.replace("projects.html");return}
+  var p=PROJECTS[idx],n=PROJECTS.length,prev=PROJECTS[(idx-1+n)%n],next=PROJECTS[(idx+1)%n];
+  var lb=document.getElementById("lb"),img=document.getElementById("lbimg"),cnt=document.getElementById("lbc"),cur=0,last=null;
+
+  onRender(function(d){
+    var brand=LANG==="mk"?"Твин Пикс Ентериери":"Twin Piks Interiors";
+    document.title=p.name[LANG]+" | "+brand;
+    var md=document.querySelector('meta[name="description"]');if(md)md.content=p.desc[LANG];
+    document.getElementById("pc").textContent=catName(d,p.cat)+" · "+photoCount(d,p.photos.length);
+    document.getElementById("pt").textContent=p.name[LANG];
+    document.getElementById("pd").textContent=p.desc[LANG];
+    document.getElementById("album").innerHTML=p.photos.map(function(src,k){
+      return '<button type="button" data-i="'+k+'"><img src="'+src+'" loading="lazy" alt="'+esc(p.name[LANG]+" — "+(k+1))+'"></button>'}).join("");
+    document.querySelectorAll("#album button").forEach(function(b){b.onclick=function(){open(+b.dataset.i)}});
+    document.getElementById("pnav").innerHTML=
+      '<a href="project.html?p='+prev.slug+'"><small>← '+esc(d.prev)+'</small>'+esc(prev.name[LANG])+'</a>'+
+      '<a href="project.html?p='+next.slug+'"><small>'+esc(d.next)+' →</small>'+esc(next.name[LANG])+'</a>';
+    document.getElementById("lbx").setAttribute("aria-label",d.close);
+    if(lb.classList.contains("open"))show(cur);
+  });
+
+  function show(k){
+    var len=p.photos.length;
+    cur=(k+len)%len;
+    if(img.getAttribute("src")!==p.photos[cur]){
+      img.classList.add("ld");
+      img.onload=img.onerror=function(){img.classList.remove("ld")};
+      img.src=p.photos[cur];
+      [cur+1,cur-1].forEach(function(j){new Image().src=p.photos[(j+len)%len]});
+    }
+    img.alt=p.name[LANG]+" — "+(cur+1);
+    cnt.textContent=(cur+1)+" / "+p.photos.length;
+    var many=p.photos.length>1;
+    document.getElementById("lbp").style.display=many?"":"none";
+    document.getElementById("lbn").style.display=many?"":"none";
+  }
+  function open(k){last=document.activeElement;show(k);lb.classList.add("open");lb.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";document.getElementById("lbx").focus()}
+  function close(){lb.classList.remove("open");lb.setAttribute("aria-hidden","true");document.body.style.overflow="";if(last)last.focus()}
+  document.getElementById("lbx").onclick=close;
+  document.getElementById("lbp").onclick=function(){show(cur-1)};
+  document.getElementById("lbn").onclick=function(){show(cur+1)};
+  lb.addEventListener("click",function(e){if(e.target===lb)close()});
+  document.addEventListener("keydown",function(e){
+    if(!lb.classList.contains("open"))return;
+    if(e.key==="Escape")close();else if(e.key==="ArrowLeft")show(cur-1);else if(e.key==="ArrowRight")show(cur+1);
+  });
+  var sx=null;
+  lb.addEventListener("touchstart",function(e){sx=e.touches[0].clientX},{passive:true});
+  lb.addEventListener("touchend",function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;sx=null;if(Math.abs(dx)>45)show(cur+(dx<0?1:-1))});
+})();
+</script>
+</body>
+</html>

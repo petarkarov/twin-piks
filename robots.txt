@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://petarkarov.github.io/twin-piks/sitemap.xml

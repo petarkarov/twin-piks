@@ -4,206 +4,92 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Твин Пикс Ентериери | Twin Piks Interiors</title>
-<meta name="description" content="Дизајн на ентериер и изведба. Interior design and execution.">
+<meta name="description" content="Дизајн на ентериер и целосна реализација на проекти. Interior design and execution.">
+<link rel="canonical" href="https://petarkarov.github.io/twin-piks/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Твин Пикс Ентериери | Twin Piks Interiors">
+<meta property="og:title" content="Твин Пикс Ентериери | Twin Piks Interiors">
+<meta property="og:description" content="Дизајн на ентериер и целосна реализација на проекти — од првата скица до последниот детаљ.">
+<meta property="og:url" content="https://petarkarov.github.io/twin-piks/">
+<meta property="og:image" content="https://petarkarov.github.io/twin-piks/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="mk_MK">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d0f0c">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#0d0f0c;--fg:#f2f4ee;--mut:#9aa092;--line:rgba(255,255,255,.1);--card:#161912;--acc:#a3c97a;--g:#8fae6b;--gr:#9d9ea3;--glow:rgba(143,174,107,.28);
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f5f7f1;--fg:#121510;--mut:#5f665a;--line:rgba(0,0,0,.1);--card:#e9eee1;--acc:#5f8a35;--glow:rgba(143,174,107,.35)}}
-:root[data-theme="light"]{--bg:#f5f7f1;--fg:#121510;--mut:#5f665a;--line:rgba(0,0,0,.1);--card:#e9eee1;--acc:#5f8a35;--glow:rgba(143,174,107,.35)}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{background:var(--bg);color:var(--fg);font:400 16px/1.65 Manrope,system-ui,sans-serif;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-h1,h2,h3{font-weight:800;letter-spacing:-.03em;line-height:1.02}
-.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
-.nav{position:fixed;left:50%;transform:translateX(-50%);top:calc(env(safe-area-inset-top,0px) + 14px);z-index:30;width:min(920px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;padding:8px 10px 8px 18px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--bg) 62%,transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;letter-spacing:.08em;text-transform:uppercase}
-.logo svg{height:26px;width:auto}
-.nav nav{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500}
-.nav nav a{padding:8px 14px;border-radius:999px;color:var(--mut);transition:.2s}
-.nav nav a:hover{color:var(--fg);background:var(--line)}
-.pill{background:var(--g)!important;color:#0d0f0c!important;font-weight:700}
-.lang{border:1px solid var(--line);background:none;color:var(--fg);padding:7px 12px;border-radius:999px;font:700 12px Manrope;cursor:pointer}
-@media(max-width:700px){.nav nav a:not(.pill){display:none}}
-.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:140px 0 56px;overflow:hidden}
-.hero::before{content:"";position:absolute;width:70vmax;height:70vmax;right:-25vmax;top:-30vmax;background:radial-gradient(circle,var(--glow),transparent 62%);pointer-events:none}
-.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse at 70% 20%,#000,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 70% 20%,#000,transparent 70%);opacity:.6;pointer-events:none}
-.hero .wrap{position:relative;z-index:1}
-.tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:500;color:var(--mut);margin-bottom:28px}
-.tag i{width:7px;height:7px;border-radius:50%;background:var(--g);box-shadow:0 0 12px var(--g)}
-.hero h1{font-size:clamp(46px,9.5vw,142px);max-width:13ch}
-.hero h1 em{font-style:normal;color:var(--acc)}
-.hrow{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-top:44px}
-.hero p{max-width:440px;color:var(--mut);font-size:18px}
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--fg);color:var(--bg);padding:16px 28px;border-radius:999px;font-weight:700;font-size:14px;transition:.25s}
-.btn:hover{background:var(--g);color:#0d0f0c;transform:translateY(-2px)}
-.btn.o{background:none;color:var(--fg);border:1px solid var(--line)}
-.marq{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:20px 0}
-.marq div{display:inline-block;animation:m 30s linear infinite;font-size:clamp(22px,3vw,34px);font-weight:800;letter-spacing:-.02em;color:var(--mut)}
-.marq span{margin:0 28px}.marq b{color:var(--g);font-weight:800}
-@keyframes m{to{transform:translateX(-50%)}}
-section{padding:120px 0}
-.eyebrow{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);margin-bottom:18px}
-h2{font-size:clamp(36px,6vw,76px);margin-bottom:28px;max-width:16ch}
-.intro{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:end}
-.intro p{color:var(--mut);font-size:18px}
-@media(max-width:800px){.intro{grid-template-columns:1fr;gap:12px}section{padding:84px 0}}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 36px}
-.filters button{background:none;border:1px solid var(--line);color:var(--mut);padding:9px 20px;border-radius:999px;font:500 13px Manrope;cursor:pointer;transition:.2s}
-.filters button:hover{color:var(--fg)}
-.filters button.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
-.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-.tile{grid-column:span 4;position:relative;display:block;border-radius:24px;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(145deg,var(--c1),var(--c2))}
-.tile:nth-child(5n+1){grid-column:span 7;aspect-ratio:auto;min-height:420px}
-.tile:nth-child(5n+2){grid-column:span 5}
-@media(max-width:900px){.tile,.tile:nth-child(5n+1),.tile:nth-child(5n+2){grid-column:span 6;aspect-ratio:4/5;min-height:0}}
-@media(max-width:560px){.tile,.tile:nth-child(5n+1),.tile:nth-child(5n+2){grid-column:span 12}}
-.tile::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 15%,rgba(255,255,255,.22),transparent 45%);transition:.5s}
-.tile:hover::before{transform:scale(1.3)}
-.tile .ph{position:absolute;top:20px;left:22px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6)}
-.tile .cap{position:absolute;inset:auto 0 0 0;padding:60px 24px 22px;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
-.tile h3{font-size:26px;letter-spacing:-.02em}
-.tile small{font-size:12px;opacity:.75;letter-spacing:.06em}
-.tile .ar{width:44px;height:44px;flex:none;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;transform:translateY(8px);opacity:0;transition:.3s}
-.tile:hover .ar{transform:none;opacity:1}
-.tile.hide{display:none}
-.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:20px}
-.bento div{grid-column:span 2;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:36px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;transition:.3s}
-.bento div:hover{border-color:var(--g);transform:translateY(-4px)}
-.bento div:first-child{grid-column:span 3;background:linear-gradient(150deg,var(--g),#5d7a3f);color:#0d0f0c;border:none}
-.bento div:first-child p{color:rgba(13,15,12,.75)}
-.bento div:nth-child(2){grid-column:span 3}
-@media(max-width:800px){.bento div,.bento div:first-child,.bento div:nth-child(2){grid-column:span 6;min-height:0;gap:40px}}
-.bento .n{font-size:13px;font-weight:700;letter-spacing:.15em;opacity:.7}
-.bento h3{font-size:32px;margin-bottom:10px}
-.bento p{color:var(--mut);font-size:15px}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:30px;border-top:1px solid var(--line)}
-@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.steps{grid-template-columns:1fr}}
-.steps div{padding:30px 26px 30px 0;border-bottom:1px solid var(--line)}
-.steps b{display:block;font-size:56px;font-weight:800;letter-spacing:-.04em;color:var(--g);line-height:1}
-.steps h3{font-size:24px;margin:18px 0 8px}
-.steps p{color:var(--mut);font-size:15px}
-.cta{margin:0 24px 24px;border-radius:40px;background:linear-gradient(150deg,var(--g),#5d7a3f);color:#0d0f0c;padding:100px 24px;text-align:center;position:relative;overflow:hidden}
-.cta h2{margin:0 auto 20px;max-width:12ch}
-.cta p{max-width:520px;margin:0 auto 34px;color:rgba(13,15,12,.75);font-size:18px}
-.cta .btn{background:#0d0f0c;color:#f2f4ee}.cta .btn:hover{background:#fff;color:#0d0f0c}
-.cta .btn.o{background:none;color:#0d0f0c;border-color:rgba(13,15,12,.3)}
-.cta .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.clist{display:flex;gap:10px 28px;justify-content:center;flex-wrap:wrap;margin-top:40px;font-size:14px;font-weight:700}
-.clist a:hover{text-decoration:underline}
-footer{padding:30px 0 40px;font-size:13px;color:var(--mut)}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
-.rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.marq div{animation:none}}
-.tile{background-size:cover;background-position:center}.tile::before{display:none}.tile .img{display:none}.tile{transition:transform .5s}.tile:hover{transform:scale(1.015)}.hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.45;-webkit-mask-image:linear-gradient(to bottom,#000 15%,transparent 92%);mask-image:linear-gradient(to bottom,#000 15%,transparent 92%)}
-</style>
+<link rel="stylesheet" href="assets/style.css?v=2">
+<script>document.documentElement.className="js"</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Твин Пикс Ентериери","alternateName":"Twin Piks Interiors","description":"Дизајн на ентериер и целосна реализација на проекти. Interior design and execution.","url":"https://petarkarov.github.io/twin-piks/","logo":"https://petarkarov.github.io/twin-piks/apple-touch-icon.png","image":"https://petarkarov.github.io/twin-piks/og-image.jpg","telephone":"+38970398846","email":"twinpiks@hotmail.com","hasMap":"https://maps.app.goo.gl/4P9W3wDcY8rGWKr36","address":{"@type":"PostalAddress","addressCountry":"MK"},"sameAs":["https://www.facebook.com/twinpiksinteriors"]}
+</script>
 </head>
 <body>
 <div class="nav">
-<a class="logo" href="#top" aria-label="Твин Пикс"><svg viewBox="120 405 1325 585" aria-hidden="true"><polygon fill="#8fae6b" points="125,957 347,655 560,957 507,957 347,738 187,957"/><polygon fill="#9d9ea3" points="358,658 714,707 997,455 640,957 580,957"/><polygon fill="#8fae6b" points="648,957 1041,413 1436,957 1328,957 1041,565 755,957"/><rect fill="#8fae6b" x="125" y="973" width="1311" height="14"/></svg>Твин Пикс</a>
-<nav><a href="#portfolio" data-k="n1"></a><a href="#services" data-k="n2"></a><a href="#process" data-k="n3"></a><button class="lang" id="lang">EN</button><a class="pill" href="#contact" data-k="n4"></a></nav>
+<a class="logo" href="index.html" aria-label="Твин Пикс"><svg viewBox="120 405 1325 585" aria-hidden="true"><polygon fill="#8fae6b" points="125,957 347,655 560,957 507,957 347,738 187,957"/><polygon fill="#9d9ea3" points="358,658 714,707 997,455 640,957 580,957"/><polygon fill="#8fae6b" points="648,957 1041,413 1436,957 1328,957 1041,565 755,957"/><rect fill="#8fae6b" x="125" y="973" width="1311" height="14"/></svg>Твин Пикс</a>
+<nav><a href="projects.html" data-k="n1">Проекти</a><a href="index.html#services" data-k="n2">Услуги</a><a href="index.html#process" data-k="n3">Процес</a><button class="lang" id="lang" type="button">EN</button><a class="pill" href="contact.html" data-k="n4">Контакт</a></nav>
 </div>
 
 <main id="top">
-<div class="hero"><div class="bg" id="herobg"></div><div class="wrap">
+<div class="hero"><div class="bg" id="herobg" style="background-image:url(images/dark-walnut-kitchen.jpg)"></div><div class="wrap">
 <div class="tag"><i></i>Twin Piks Interiors · Твин Пикс Ентериери</div>
-<h1 id="h1"></h1>
-<div class="hrow"><p data-k="hp"></p><a class="btn" href="#contact"><span data-k="cta"></span> →</a></div>
+<h1 data-kh="h1">Простори <em>осмислени</em> и изведени да траат.</h1>
+<div class="hrow"><p data-k="hp">Дизајн на ентериер и целосна реализација на едно место — од првата скица до последниот детаљ.</p><a class="btn" href="contact.html"><span data-k="cta">Започнете проект</span> →</a></div>
 </div></div>
 
-<div class="marq"><div id="marq"></div></div>
+<div class="marq" aria-hidden="true"><div id="marq"></div></div>
 
 <section><div class="wrap intro">
-<div class="rv"><div class="eyebrow" data-k="ab"></div><h2 data-k="abh" style="margin:0"></h2></div>
-<p class="rv" data-k="abp"></p>
+<div class="rv"><div class="eyebrow" data-k="ab">За нас</div><h2 data-k="abh" style="margin:0">Една визија — од идеја до готов простор.</h2></div>
+<p class="rv" data-k="abp">Твин Пикс Ентериери осмислува и реализира ентериери за домови, апартмани и деловни простори. Бидејќи дизајнот и изведбата се во наши раце, идејата останува доследна од првичниот цртеж до конечната реализација.</p>
 </div></section>
 
 <section id="portfolio" style="padding-top:0"><div class="wrap">
-<div class="eyebrow rv" data-k="n1"></div><h2 class="rv" data-k="ph"></h2>
+<div class="eyebrow rv" data-k="n1">Проекти</div><h2 class="rv" data-k="ph">Избрани проекти</h2>
 <div class="filters" id="filters"></div>
 <div class="grid" id="grid"></div>
+<div class="more"><a class="btn o" href="projects.html"><span data-k="allp">Сите проекти</span> →</a></div>
 </div></section>
 
 <section id="services" style="padding-top:0"><div class="wrap">
-<div class="eyebrow rv" data-k="n2"></div><h2 class="rv" data-k="sh"></h2>
+<div class="eyebrow rv" data-k="n2">Услуги</div><h2 class="rv" data-k="sh">Дизајн и реализација</h2>
 <div class="bento rv">
-<div><span class="n">01</span><span><h3 data-k="s1"></h3><p data-k="s1p"></p></span></div>
-<div><span class="n">02</span><span><h3 data-k="s2"></h3><p data-k="s2p"></p></span></div>
-<div><span class="n">03</span><span><h3 data-k="s3"></h3><p data-k="s3p"></p></span></div>
+<div><span class="n">01</span><span><h3 data-k="s1">Дизајн на ентериер</h3><p data-k="s1p">Концепт, планирање на просторот, избор на материјали, бои и осветлување — приспособени на вашиот начин на живот.</p></span></div>
+<div><span class="n">02</span><span><h3 data-k="s2">Изведба на ентериер</h3><p data-k="s2p">Целосна реализација на проектот, со контрола врз квалитетот, роковите и буџетот.</p></span></div>
+<div><span class="n">03</span><span><h3 data-k="s3">Мебел по мерка</h3><p data-k="s3p">Кујни, плакари, ѕидни облоги и уникатни парчиња мебел, изработени по мерка.</p></span></div>
 </div></div></section>
 
 <section id="process" style="padding-top:0"><div class="wrap">
-<div class="eyebrow rv" data-k="n3"></div><h2 class="rv" data-k="prh"></h2>
+<div class="eyebrow rv" data-k="n3">Процес</div><h2 class="rv" data-k="prh">Како работиме</h2>
 <div class="steps rv">
-<div><b>01</b><h3 data-k="t1"></h3><p data-k="t1p"></p></div>
-<div><b>02</b><h3 data-k="t2"></h3><p data-k="t2p"></p></div>
-<div><b>03</b><h3 data-k="t3"></h3><p data-k="t3p"></p></div>
-<div><b>04</b><h3 data-k="t4"></h3><p data-k="t4p"></p></div>
+<div><b>01</b><h3 data-k="t1">Консултација</h3><p data-k="t1p">Ги разгледуваме просторот, вашите потреби, желби и буџет.</p></div>
+<div><b>02</b><h3 data-k="t2">Концепт</h3><p data-k="t2p">Изработка на планови и 3D визуелизации, како и избор на материјали.</p></div>
+<div><b>03</b><h3 data-k="t3">Изведба</h3><p data-k="t3p">Изведба и монтажа под наш надзор, во секоја фаза од проектот.</p></div>
+<div><b>04</b><h3 data-k="t4">Примопредавање</h3><p data-k="t4p">Ги завршуваме последните детали и го опремуваме просторот, подготвен за вселување.</p></div>
 </div></div></section>
 
 <div class="cta" id="contact">
-<div class="eyebrow" style="color:#0d0f0c" data-k="n4"></div>
-<h2 data-k="ch"></h2><p data-k="cp"></p>
-<div class="btns"><a class="btn" href="tel:+38970398846">+389 70 398 846</a><a class="btn o" href="mailto:twinpiks@hotmail.com">twinpiks@hotmail.com</a></div>
+<div class="eyebrow" style="color:#0d0f0c" data-k="n4">Контакт</div>
+<h2 data-k="ch">Да го создадеме просторот што го замислувате.</h2><p data-k="cp">Кажете ни каде се наоѓа вашиот простор, што планирате да направите и кога сакате да започне проектот. На секое ваше запитување одговараме лично.</p>
+<div class="btns"><a class="btn" href="contact.html"><span data-k="cta">Започнете проект</span> →</a><a class="btn o" href="tel:+38970398846">+389 70 398 846</a><a class="btn o" href="mailto:twinpiks@hotmail.com">twinpiks@hotmail.com</a></div>
 <div class="clist"><a href="https://maps.app.goo.gl/4P9W3wDcY8rGWKr36" target="_blank" rel="noopener">Google Maps ↗</a><a href="https://www.facebook.com/twinpiksinteriors" target="_blank" rel="noopener">Facebook ↗</a></div>
 </div>
 </main>
-<footer><div class="wrap"><span>© 2026 Твин Пикс Ентериери / Twin Piks Interiors</span><span data-k="ft"></span></div></footer>
+<footer><div class="wrap"><span>© 2026 Твин Пикс Ентериери / Twin Piks Interiors</span><span data-k="ft">Дизајн · Реализација</span></div></footer>
 
-<script>var IMG=["images/marble-kitchen.jpg", "images/timber-slats.jpg", "images/island-glass-cabinet.jpg", "images/fabu-spot.jpg", "images/classic-white-kitchen.jpg", "images/olive-green-kitchen.jpg", "images/delicia.jpg", "images/dark-walnut-kitchen.jpg"];</script>
+<script src="assets/projects.js?v=2"></script>
+<script src="assets/site.js?v=2"></script>
 <script>
-var T={
-mk:{n1:"Проекти",n2:"Услуги",n3:"Процес",n4:"Контакт",
-h1:"Простори <em>дизајнирани</em> и изградени да траат.",hp:"Дизајн на ентериер и изведба под еден покрив: од првата скица до последниот детаљ.",cta:"Започнете проект",
-ab:"За нас",abh:"Една визија, од идеја до реализација.",abp:"Твин Пикс Ентериери дизајнира и изведува ентериери за домови, апартмани и деловни простори. Бидејќи дизајнот и изведбата се во иста рака, нема губење на идеја помеѓу цртежот и градбата.",
-ph:"Избрани проекти",sh:"Дизајн и изведба",
-s1:"Дизајн на ентериер",s1p:"Концепт, распоред на простор, материјали, бои и осветлување, прилагодени на вашиот начин на живот.",
-s2:"Изведба и градба",s2p:"Изведба на сите работи, со контрола на квалитет, рокови и буџет.",
-s3:"Мебел по мера",s3p:"Кујни, плакари, ѕидни облоги и единечни парчиња, изработени по мерка.",
-prh:"Како работиме",t1:"Консултација",t1p:"Се запознаваме со просторот, вашите желби и буџетот.",t2:"Концепт",t2p:"Планови, 3D визуелизации и избор на материјали.",t3:"Изведба",t3p:"Градба и монтажа под наш надзор, чекор по чекор.",t4:"Примопредавба",t4p:"Завршни детали и опремување, простор подготвен за живеење.",
-ch:"Да го создадеме вашиот простор.",cp:"Кажете ни каде се наоѓа просторот, што сакате да направите и кога би почнале. Секое барање добива личен одговор.",
-ft:"Дизајн · Изведба",all:"Сите",f1:"Домови",f2:"Кујни",f3:"Бањи",f4:"Деловни",
-pn:["Кујна со мермер","Дрвени ламели","Остров и витрина","Fabu Spot","Класична бела кујна","Маслинесто зелена кујна","Delicia","Темна кујна со орев"],pl:"Фотографија наскоро",mq:["Дизајн","Изведба","Ентериер","Мебел по мера","Домови","Деловни простори"]},
-en:{n1:"Projects",n2:"Services",n3:"Process",n4:"Contact",
-h1:"Spaces <em>designed</em> and built to last.",hp:"Interior design and execution under one roof: from the first sketch to the final detail.",cta:"Start your project",
-ab:"About",abh:"One vision, from idea to completion.",abp:"Twin Piks Interiors designs and builds interiors for homes, apartments and commercial spaces. Because design and execution sit in the same hands, nothing is lost between the drawing and the build.",
-ph:"Selected projects",sh:"Design and execution",
-s1:"Interior design",s1p:"Concept, space planning, materials, colour and lighting, tailored to the way you live.",
-s2:"Execution and build",s2p:"Delivery of all works, with control over quality, schedule and budget.",
-s3:"Custom furniture",s3p:"Kitchens, wardrobes, wall panelling and one-off pieces, made to measure.",
-prh:"How we work",t1:"Consultation",t1p:"We learn about the space, your wishes and your budget.",t2:"Concept",t2p:"Plans, 3D visuals and material selection.",t3:"Execution",t3p:"Construction and installation under our supervision, step by step.",t4:"Handover",t4p:"Final details and styling, a space ready to live in.",
-ch:"Let's create your space.",cp:"Tell us where the space is, what you would like to do and when you would like to begin. Every inquiry gets a personal reply.",
-ft:"Design · Execution",all:"All",f1:"Homes",f2:"Kitchens",f3:"Bathrooms",f4:"Commercial",
-pn:["Marble Kitchen","Timber Slats","Island and Glass Cabinet","Fabu Spot","Classic White Kitchen","Olive Green Kitchen","Delicia","Dark Walnut Kitchen"],pl:"Photo coming soon",mq:["Design","Execution","Interiors","Custom furniture","Homes","Commercial spaces"]}};
-var cats=[1,1,1,3,1,0,3,1];
-var lang="mk",cur="all";
-function render(){
-var t=T[lang];
-document.documentElement.lang=lang;
-document.querySelectorAll("[data-k]").forEach(function(e){e.textContent=t[e.dataset.k]});
-document.getElementById("h1").innerHTML=t.h1;
-var m=t.mq.map(function(x){return "<span>"+x+"</span><b>✦</b>"}).join("");
-document.getElementById("marq").innerHTML=m+m+m+m;
-document.getElementById("lang").textContent=lang==="mk"?"EN":"МК";
-var fs=[["all",t.all],[1,t.f2],[0,t.f1],[3,t.f4]];
-document.getElementById("filters").innerHTML=fs.map(function(f){return '<button data-f="'+f[0]+'" class="'+(String(f[0])===String(cur)?"on":"")+'">'+f[1]+'</button>'}).join("");
-var vis=0;
-document.getElementById("grid").innerHTML=t.pn.map(function(n,i){
-var show=cur==="all"||String(cats[i])===String(cur);
-var cn=[t.f1,t.f2,t.f3,t.f4][cats[i]];
-return '<a class="tile'+(show?"":" hide")+'" href="#contact" style="background-image:url('+IMG[i]+')"><div class="cap"><div><h3>'+n+'</h3><small>'+cn+'</small></div><span class="ar">↗</span></div></a>'}).join("");
-document.querySelectorAll("#filters button").forEach(function(b){b.onclick=function(){cur=b.dataset.f;render()}});
-}
-document.getElementById("lang").onclick=function(){lang=lang==="mk"?"en":"mk";render()};
-render();
-document.getElementById('herobg').style.backgroundImage='url('+IMG[7]+')';
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
-document.querySelectorAll(".rv").forEach(function(e){io.observe(e)});
+projectGrid("grid","filters",false);
+onRender(function(d){
+  var m=d.mq.map(function(x){return "<span>"+esc(x)+"</span><b>✦</b>"}).join("");
+  document.getElementById("marq").innerHTML=m+m+m+m;
+});
 </script>
 </body>
 </html>
